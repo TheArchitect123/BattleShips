@@ -53,3 +53,5 @@ Upon clicking exit, the game will close.
  4. If `hit` a red marker is placed on top of the ship.  and the attacking player also can place a flag in that location to remember where they have attacked.
 
 ## 6. . Assets:
+
+![ship sample](battleS.gif)
