@@ -18,8 +18,10 @@ l# BattleShips
 
 
 ## 5. Gameplay
-Describe the mechanic or rules of the game. For example, what is the result of a
-player move, what is a legal move, and so on.
+ 5.1 This is a turn-based game.
+ 5.2 The player will call out where they think an enemy ship is. ie: `D-4`
+ 5.3 The player who is recieving the attack will be honest and say if it was a `hit` or `miss`.
+ 5.4 If `hit` a red marker is placed on top of the ship.  and the attacking player also can place a flag in that location to remember where they have attacked. 
 
 
 ## 6. . Assets:
