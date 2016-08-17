@@ -1,6 +1,10 @@
 # BattleShips
 
+<<<<<<< HEAD
 ## 1.
+=======
+## 1. This is working now!!
+>>>>>>> a9f7960ecfa6d0c50e02b7f8ee3b1eb9e2ba3422
 
 
 
