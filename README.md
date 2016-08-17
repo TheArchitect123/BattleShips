@@ -29,5 +29,4 @@
 
 
 ## 6. . Assets:
-List (no need for graphics in this basic document) what assets, in this case images
-and audio files are needed.
+![BattleShips](battleS.gif)
