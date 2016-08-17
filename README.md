@@ -2,23 +2,23 @@
 
 ## 1. Team and Title Details:
 	Game Title: `BattleShips`
-	
+
 -	Name: `Dan Gerchcovich`
 	ID: `1750291`
 	GitHub user name: `TheArchitect123`
-	
+
 -	Name: `Clancy Light Townsend`
 	ID: `9715290`
 	GitHub user name: `ClancyLight`
-	
+
 -	Name: `Zane Henderson`
 	ID: `100498430`
 	GitHub user name: `zanehenderson`
 
 
-## 2. 
-##Overview: 
-BattleShips is a game that involves two players guessing and predicting each other's ships' positions on the board. They player has a single turn to guess the opponent's positions, and if he predicts the correct position then he gets another turn. If however he misses he will lose his turn. 
+## 2.
+##Overview:
+BattleShips is a game that involves two players guessing and predicting each other's ships' positions on the board. They player has a single turn to guess the opponent's positions, and if he predicts the correct position then he gets another turn. If however he misses he will lose his turn.
 
 BattleShips is a game specifically targeting the `Nintendo Entertainment System` and the `Sega Game Gear` platforms.
 
