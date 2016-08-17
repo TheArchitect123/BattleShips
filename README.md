@@ -17,7 +17,14 @@
 
 
 
-## 4.
+## 4. User Interface
+The player is presented with buttons and icons that the player can select with the mouse.
+
+Clicking the 'menu' button will bring the player back to the menu.
+
+The player can click on the board to place ships in the pre-game, and click again to choose a coordinate for their guess.
+
+Upon clicking exit, the game will close.
 
 
 
