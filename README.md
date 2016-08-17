@@ -1,4 +1,23 @@
 # BattleShips
 
+## 1. 
 
-Hi guys this is the readme.
+
+
+
+## 2.
+
+
+
+## 3.
+
+
+
+## 4.
+
+
+
+## 5.
+
+
+## 6.
