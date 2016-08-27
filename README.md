@@ -7,13 +7,21 @@
 	ID: `1750291`
 	GitHub user name: `TheArchitect123`
 
--	Name: `Clancy Light Townsend`
-	ID: `9715290`
-	GitHub user name: `ClancyLight`
+-   Name: `Carlos`
+    ID: `4933605`
+    GitHub user name: 
+
+-	Name: `Eugene Putra `
+	ID: `100663416`
+	GitHub user name: 
 
 -	Name: `Zane Henderson`
 	ID: `100498430`
 	GitHub user name: `zanehenderson`
+
+-	Name: `Nathan Djuanda`
+    ID: `100663801`
+    GitHub user name:
 
 
 ## 2.
@@ -55,3 +63,15 @@ Upon clicking exit, the game will close.
 ## 6. . Assets:
 
 ![ship sample](battleS.gif)
+
+
+##Functional Issues 
+Listed below are the functional issues for the source codes: 
+
+Functional issues inside 'DeploymentController.vb': 
+1. Inside method named 'HandleDeploymentInput()' there are sets of 'if' statements that can be easily implemented within a 'switch-case' statement. Where the condition is the 'KeyTyped' 
+
+
+
+
+
