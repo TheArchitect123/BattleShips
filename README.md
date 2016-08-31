@@ -66,12 +66,8 @@ Upon clicking exit, the game will close.
 
 
 ##Functional Issues 
-Listed below are the functional issues for the source codes: 
-
-Functional issues inside 'DeploymentController.vb': 
-1. Inside method named 'HandleDeploymentInput()' there are sets of 'if' statements that can be easily implemented within a 'switch-case' statement. Where the condition is the 'KeyTyped' 
-
-
-
+Listed below are the functional issues for the battle ship game: 
+1. When the application loads up, the splash screen does not load the image properly. It produces the following result: 
+![VisualStyle](FunctionalIssue.gif)
 
 
