@@ -67,7 +67,19 @@ Upon clicking exit, the game will close.
 
 ##Functional Issues 
 Listed below are the functional issues for the battle ship game: 
-1. When the application loads up, the splash screen does not load the image properly. It produces the following result: 
-![VisualStyle](FunctionalIssue.gif)
+1. When the application loads up, the splash screen does not load the image properly. It produces the following result:
 
+![VisualStyle](ImageShot.png)
+
+
+2. Clicking on the blue squares (squares that represent a missed shot) increases the score count  by 1:
+![VisualStyle](GameScreen.png)
+
+
+3. You cannot rotate the ships on the menu
+4. The ships are also not mapped to where the cursor is pressed on the menu
+5. The play button and the ship disappear when you place a big ship on the map. 
+![VisualStyle](MainMenu.png)
+
+6. When you get to the highscores menu you are supposed to be able to input 3 characters for the name, but it only accepts 2.
 
