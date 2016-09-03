@@ -13,7 +13,7 @@
 
 -	Name: `Eugene Putra `
 	ID: `100663416`
-	GitHub user name: 
+	GitHub user name: `eugeneputra`
 
 -	Name: `Zane Henderson`
 	ID: `100498430`
