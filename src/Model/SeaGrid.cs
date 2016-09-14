@@ -19,9 +19,9 @@ namespace BattleShips
 	public class SeaGrid : ISeaGrid
 	{
 
-		private const int _WIDTH = 10;
+		private const int _WIDTH = 20;
 
-		private const int _HEIGHT = 10;
+		private const int _HEIGHT = 20;
 		private Tile[,] _GameTiles = new Tile[_WIDTH, _HEIGHT];
 		private Dictionary<ShipName, Ship> _Ships;
 

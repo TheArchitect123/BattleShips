@@ -114,8 +114,10 @@ namespace BattleShips
 			//Calculate the row/col clicked
 			int row = 0;
 			int col = 0;
-			row = Convert.ToInt32(Math.Floor((mouse.Y) / (UtilityFunctions.CELL_HEIGHT + UtilityFunctions.CELL_GAP)));
+			row = Convert.ToInt32(Math.Floor((mouse.Y) / (UtilityFunctions.CELL_HEIGHT + UtilityFunctions.CELL_GAP))) - 3;
 			col = Convert.ToInt32(Math.Floor((mouse.X - UtilityFunctions.FIELD_LEFT) / (UtilityFunctions.CELL_WIDTH + UtilityFunctions.CELL_GAP)));
+			Console.WriteLine ("Row value: " + row);
+			Console.WriteLine ("Column value: " + col);
 
 			if (row >= 0 & row < GameController.HumanPlayer.PlayerGrid.Height)
 			{
