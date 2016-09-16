@@ -64,6 +64,7 @@ namespace BattleShips
 			if (SwinGame.KeyTyped(KeyCode.vk_r))
 			{
 				GameController.HumanPlayer.RandomizeDeployment();
+				GameController.ComputerPlayer.RandomizeDeployment ();
 			}
 
 			if (SwinGame.MouseClicked(MouseButton.LeftButton))
@@ -93,6 +94,7 @@ namespace BattleShips
 				else if (UtilityFunctions.IsMouseInRectangle(RANDOM_BUTTON_LEFT, TOP_BUTTONS_TOP, RANDOM_BUTTON_WIDTH, TOP_BUTTONS_HEIGHT))
 				{
 					GameController.HumanPlayer.RandomizeDeployment();
+					GameController.ComputerPlayer.RandomizeDeployment();
 				}
 			}
 		}

@@ -16,8 +16,8 @@ namespace BattleShips
 	{
 
 		protected Random _Random = new Random();
-		private static Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
-		private SeaGrid _playerGrid = new SeaGrid(_Ships);
+		private Dictionary<ShipName, Ship> _Ships = new Dictionary<ShipName, Ship>();
+		private SeaGrid _playerGrid; // = new SeaGrid(_Ships);
 		private ISeaGrid _enemyGrid;
 
 		protected BattleShipsGame _game;
@@ -60,6 +60,7 @@ namespace BattleShips
                     }
                 }
             }
+			PlayerGrid = new SeaGrid (_Ships);
 			RandomizeDeployment();
 		}
 
@@ -78,6 +79,7 @@ namespace BattleShips
 		public SeaGrid PlayerGrid
 		{
 			get { return _playerGrid; }
+			set { _playerGrid = value; }
 		}
 
 		/// <summary>
