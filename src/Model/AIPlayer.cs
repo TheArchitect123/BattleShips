@@ -64,7 +64,11 @@ namespace BattleShips
 			/// <returns>true if location 1 and location 2 are at the same spot</returns>
 			public static bool operator ==(Location thisloc, Location otherloc)
 			{
-				return !thisloc.Equals(null) && !otherloc.Equals(null) && thisloc.Row.Equals(otherloc.Row) && thisloc.Column.Equals(otherloc.Column);
+				if (!ReferenceEquals (thisloc, null) && !ReferenceEquals (otherloc, null)) {
+					return thisloc.Row.Equals (otherloc.Row) && thisloc.Column.Equals (otherloc.Column);
+				} else {
+					return false;
+				}
 			}
 
 			/// <summary>
@@ -75,7 +79,10 @@ namespace BattleShips
 			/// <returns>true if location 1 and location 2 are not at the same spot</returns>
 			public static bool operator !=(Location thisloc, Location otherloc)
 			{
-				return thisloc.Equals(null) || otherloc.Equals(null) || !thisloc.Row.Equals(otherloc.Row) || !thisloc.Column.Equals(otherloc.Column);
+				if (ReferenceEquals (thisloc, null) || ReferenceEquals (otherloc, null)) {
+					return true;
+				}
+				return !thisloc.Row.Equals(otherloc.Row) || !thisloc.Column.Equals(otherloc.Column);
 			}
 		}
 
@@ -131,12 +138,12 @@ namespace BattleShips
 		private void Delay()
 		{
 			int i = 0;
-			for (i = 0; i <= 150; i++) {
+			for (i = 0; i <= 50; i++) {
 			//Dont delay if window is closed
 				if (SwinGame.WindowCloseRequested())
 				return;
 
-			SwinGame.Delay(5);
+			SwinGame.Delay(5); // CHANGE DELAY TO BE SUITABLE
 			SwinGame.ProcessEvents();
 			SwinGame.RefreshScreen();
 		}
