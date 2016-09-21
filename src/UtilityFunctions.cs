@@ -271,11 +271,13 @@ namespace BattleShips
 			SwinGame.DrawFramerate(675, 585, GameResources.GameFont("CourierSmall"));
 		}
 
+		//adds a splash effect to the row matching the mouse position
 		public static void AddExplosion(int row, int col)
 		{
 			AddAnimation(row, col, "Splash");
 		}
 
+		//adds a splash effect to the row matching the mouse position
 		public static void AddSplash(int row, int col)
 		{
 			AddAnimation(row, col, "Splash");

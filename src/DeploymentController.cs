@@ -13,26 +13,46 @@ namespace BattleShips
 	/// </summary>
 	public static class DeploymentController
 	{
+		//the max bounds top that the ships can be deployed
 		private const int SHIPS_TOP = 98;
+
+		//the max bounds left that the ships can be deployed
 		private const int SHIPS_LEFT = 20;
+
+		//the max bounds top that the ships can be deployed height
 		private const int SHIPS_HEIGHT = 90;
 
+		//the max bounds top that the ships can be deployed width
 		private const int SHIPS_WIDTH = 300;
+
+		//the bounds of the buttons on the menu screen
 		private const int TOP_BUTTONS_TOP = 72;
 
+		//the bounds (Height) of the buttons on the menu screen
 		private const int TOP_BUTTONS_HEIGHT = 46;
+
+		//the bounds (Left) of the buttons of the play button
 		private const int PLAY_BUTTON_LEFT = 693;
 
+		//the bounds (Width) of the buttons of the play button
 		private const int PLAY_BUTTON_WIDTH = 80;
+
+		//bounds of the button that flips the boats
 		private const int UP_DOWN_BUTTON_LEFT = 410;
 
+		//bounds of the button that flips the boats (reverse)
 		private const int LEFT_RIGHT_BUTTON_LEFT = 350;
+
+		//bounds (Left) of the button that randomises the coordinates of the ships
 		private const int RANDOM_BUTTON_LEFT = 547;
 
+		//bounds (Width) of the button that randomises the coordinates of the ships
 		private const int RANDOM_BUTTON_WIDTH = 51;
 
+		//bounds (Width) of the button that controls the directions of the ship
 		private const int DIR_BUTTONS_WIDTH = 47;
 
+		//the size of the font 
 		private const int TEXT_OFFSET = 5;
 		private static Direction _currentDirection = Direction.UpDown;
 
