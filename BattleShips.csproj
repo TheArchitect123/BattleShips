@@ -107,6 +107,9 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.3.4.1\lib\net40\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\animations\startup.txt">
@@ -191,6 +194,7 @@
     <WinLibraryFiles Include="lib\win\swingame.rc" />
     <WinLibraryFiles Include="lib\win\zlib1.dll" />
     <None Include="Resources\sounds\1.mp3" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />

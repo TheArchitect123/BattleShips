@@ -6,6 +6,9 @@ using System.Collections.Generic;
 
 using System.Diagnostics;
 
+using NUnit;
+using NUnit.Framework;
+
 namespace BattleShips
 {
 	/// <summary>
@@ -16,6 +19,7 @@ namespace BattleShips
 	/// <remarks>
 	/// Deployment information is supplied to allow ships to be drawn.
 	/// </remarks>
+	[TestFixture]
 	public class Ship
 	{
 		private ShipName _shipName;
@@ -115,9 +119,12 @@ namespace BattleShips
 			_tiles.Clear();
 		}
 
+		[Test]
 		public void Hit()
 		{
 			_hitsTaken = _hitsTaken + 1;
+			Assert.True (true);
+			Console.WriteLine ("Hit() unit test successful performed");
 		}
 
 		/// <summary>

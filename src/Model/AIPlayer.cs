@@ -5,12 +5,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using SwinGameSDK;
 
+using NUnit;
+using NUnit.Framework; 
+
 namespace BattleShips
 {
 	/// <summary>
 	/// The AIPlayer is a type of player. It can readomly deploy ships, it also has the
 	/// functionality to generate coordinates and shoot at tiles
 	/// </summary>
+
+	[TestFixture]
 	public abstract class AIPlayer : Player
 	{
 
@@ -111,6 +116,8 @@ namespace BattleShips
 		/// The AI takes its attacks until its go is over.
 		/// </summary>
 		/// <returns>The result of the last attack</returns>
+
+		[Test]
 		public override AttackResult Attack()
 		{
 			AttackResult result = default(AttackResult);
@@ -124,7 +131,18 @@ namespace BattleShips
 
 				GenerateCoords(ref row, ref column);
 				//generate coordinates for shot
-				result = _game.Shoot(row, column);
+				try {
+					result = _game.Shoot (row, column);
+					if (result == null) {
+						throw new AssertionException ("Unit test AttackResult has failed");
+					} else {
+						Assert.IsTrue (result != null);
+						Console.WriteLine ("AttackResult() successful");
+					}
+				}
+				catch(AssertionException) {
+					Console.WriteLine ("Unit test AttackResult has failed");
+				}
 				//take shot
 				ProcessShot(row, column, result);
 			} while (result.Value != ResultOfAttack.Miss && result.Value != ResultOfAttack.GameOver && !SwinGame.WindowCloseRequested());

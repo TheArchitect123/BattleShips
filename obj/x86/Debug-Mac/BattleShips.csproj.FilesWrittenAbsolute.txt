@@ -24,3 +24,4 @@
 /Users/Dan/Desktop/BattleShips/obj/x86/Debug-Mac/BattleShips.exe
 /Users/Dan/Desktop/BattleShips/obj/x86/Debug-Mac/BattleShips.exe.mdb
 /Users/Dan/Desktop/BattleShips/bin/Debug/SwinGame.dll
+/Users/Dan/Desktop/BattleShips/bin/Debug/nunit.framework.dll
