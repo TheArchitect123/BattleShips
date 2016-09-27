@@ -3,7 +3,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using NUnit.Framework;
 using System.Diagnostics;
 using SwinGameSDK;
 
@@ -14,7 +14,8 @@ namespace BattleShips
 	/// managing user input, and displaying the current state of the
 	/// game.
 	/// </summary>
-	public static class GameController
+	[TestFixture]
+    public static class GameController
 	{
 
 		private static BattleShipsGame _theGame;
@@ -101,6 +102,18 @@ namespace BattleShips
 
 			AddNewState(GameState.Deploying);
 		}
+
+        [Test]
+        public static void StartGameTest ()
+        {
+            _theGame = null;
+            _aiSetting = AIOption.Medium;
+            StartGame ();
+
+            String actual = _ai.ToString ();
+
+            Assert.AreEqual ("BattleShips.AIMediumPlayer", actual, "Fail to Test Start Game");
+        }
 
 		/// <summary>
 		/// Stops listening to the old game once a new game is started
@@ -274,6 +287,16 @@ namespace BattleShips
 					break;
 			}
 		}
+
+        [Test]
+        public static void CheckAttackResultTest ()
+        {
+            AttackResult result = new AttackResult (ResultOfAttack.GameOver, "hit", 5, 5);
+            CheckAttackResult (result);
+
+            String actual = CurrentState.ToString ();
+            Assert.AreEqual ("EndingGame", actual, "Fail to check");
+        }
 
 		/// <summary>
 		/// Handles the user SwinGame.
