@@ -231,12 +231,13 @@ namespace BattleShips
         {
             const int SCORES_HEADING = 40;
             const int SCORES_TOP = 80;
-            const int SCORE_GAP = 30;
+            const int SCORE_GAP = 35;
+            const int SCORE_TAB = 150;
 
             if (_Scores.Count == 0)
                 LoadScores();
 
-            SwinGame.DrawText("   High Scores   ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_HEADING);
+            SwinGame.DrawText("   High Scores   ", Color.White, GameResources.GameFont("Arial40"), SCORES_LEFT, SCORES_HEADING);
 
             //For all of the scores
             int i = 0;
@@ -249,10 +250,12 @@ namespace BattleShips
                 //for scores 1 - 9 use 01 - 09
                 if (i < 9)
                 {
-                    SwinGame.DrawText(" " + (i + 1) + ":   " + s.Name + "   " + s.Value, Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+                    SwinGame.DrawText(" " + (i + 1) + ":   " + s.Name, Color.White, GameResources.GameFont("Arial"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+                    SwinGame.DrawText (" " + s.Value, Color.White, GameResources.GameFont ("Arial"), SCORES_LEFT + SCORE_TAB, SCORES_TOP + i * SCORE_GAP);
                 }
                 else {
-                    SwinGame.DrawText(i + 1 + ":   " + s.Name + "   " + s.Value, Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+                    SwinGame.DrawText(i + 1 + ":  " + s.Name, Color.White, GameResources.GameFont("Arial"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+                    SwinGame.DrawText (" " + s.Value, Color.White, GameResources.GameFont ("Arial"), SCORES_LEFT+ SCORE_TAB, SCORES_TOP + i * SCORE_GAP);
                 }
             }
         }
@@ -292,9 +295,9 @@ namespace BattleShips
                 GameController.AddNewState(GameState.ViewingHighScores);
 
                 int x = 0;
-                x = SCORES_LEFT + SwinGame.TextWidth(GameResources.GameFont("Courier"), "Name: ");
+                x = SCORES_LEFT + SwinGame.TextWidth(GameResources.GameFont("Arial"), "Name: ");
 
-                SwinGame.StartReadingText(Color.White, NAME_WIDTH, GameResources.GameFont("Courier"), x, ENTRY_TOP);
+                SwinGame.StartReadingText(Color.White, NAME_WIDTH, GameResources.GameFont("Arial"), x, ENTRY_TOP);
 
                 //Read the text from the user
                 while (SwinGame.ReadingText())
@@ -303,7 +306,7 @@ namespace BattleShips
 
                     UtilityFunctions.DrawBackground();
                     DrawHighScores();
-                    SwinGame.DrawText("Name: ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, ENTRY_TOP);
+                    SwinGame.DrawText("Name: ", Color.White, GameResources.GameFont("Arial"), SCORES_LEFT, ENTRY_TOP);
                     SwinGame.RefreshScreen();
                 }
 
