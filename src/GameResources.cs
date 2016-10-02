@@ -19,7 +19,6 @@ namespace BattleShips
 			NewFont("Courier", "cour.ttf", 14);
 			NewFont("CourierSmall", "cour.ttf", 8);
 			NewFont("Menu", "ffaccess.ttf", 8);
-			NewFont("Menu", "ffaccess.ttf", 8);
 			NewFont("Arial40", "arial.ttf", 40);
 			NewFont("Arial", "arial.ttf", 20);
 		}
