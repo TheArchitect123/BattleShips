@@ -8,6 +8,10 @@ namespace BattleShips
 	/// </summary>
 	public static class DiscoveryController
 	{
+		private const int TOP_BUTTONS_TOP = 72;
+		private const int TOP_BUTTONS_HEIGHT = 44;
+		private const int EXIT_BUTTON_LEFT = 693;
+		private const int EXIT_BUTTON_WIDTH = 80;
 
 		/// <summary>
 		/// Handles input during the discovery phase of the game.
@@ -25,6 +29,9 @@ namespace BattleShips
 
 			if (SwinGame.MouseClicked(MouseButton.LeftButton))
 			{
+				if (UtilityFunctions.IsMouseInRectangle (EXIT_BUTTON_LEFT, TOP_BUTTONS_TOP, EXIT_BUTTON_WIDTH, TOP_BUTTONS_HEIGHT)) {
+					GameController.AddNewState (GameState.ViewingGameMenu);
+				}
 				DoAttack();
 			}
 		}
@@ -77,6 +84,8 @@ namespace BattleShips
 			SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);
 			SwinGame.DrawText(GameController.HumanPlayer.Hits.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, HITS_TOP);
 			SwinGame.DrawText(GameController.HumanPlayer.Missed.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SPLASH_TOP);
+
+			SwinGame.DrawBitmap (GameResources.GameImage ("ExitButton"), EXIT_BUTTON_LEFT, TOP_BUTTONS_TOP);
 		}
 
 	}
