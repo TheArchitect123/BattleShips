@@ -73,7 +73,7 @@ namespace BattleShips
 			const int HITS_TOP = 206;
 			const int SPLASH_TOP = 256;
 
-			if ((SwinGame.KeyDown(KeyCode.vk_SPACE))
+			if ((SwinGame.KeyDown(KeyCode.vk_SPACE)))
 			{
 				UtilityFunctions.DrawField(GameController.ComputerPlayer.PlayerGrid, GameController.ComputerPlayer, true);
 			}

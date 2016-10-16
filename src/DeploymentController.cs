@@ -11,7 +11,7 @@ namespace BattleShips
 	/// The DeploymentController controls the players actions
 	/// during the deployment phase.
 	/// </summary>
-	public static class DeploymentController
+public static class DeploymentController
 	{
 		//the max bounds top that the ships can be deployed
 		private const int SHIPS_TOP = 98;
@@ -217,18 +217,20 @@ namespace BattleShips
 		/// Gets the ship that the mouse is currently over in the selection panel.
 		/// </summary>
 		/// <returns>The ship selected or none</returns>
-		private static ShipName GetShipMouseIsOver()
-	{
-		foreach (ShipName sn in Enum.GetValues(typeof(ShipName))) {
-			int i = 0;
-				i = Convert.ToInt32(sn) - 1;
+		private static ShipName GetShipMouseIsOver ()
+		{
+			foreach (ShipName sn in Enum.GetValues (typeof (ShipName))) {
+				int i = 0;
+				i = Convert.ToInt32 (sn) - 1;
 
-				if (UtilityFunctions.IsMouseInRectangle(SHIPS_LEFT, SHIPS_TOP + i * SHIPS_HEIGHT, SHIPS_WIDTH, SHIPS_HEIGHT)) {
-				return sn;
+				if (UtilityFunctions.IsMouseInRectangle (SHIPS_LEFT, SHIPS_TOP + i * SHIPS_HEIGHT, SHIPS_WIDTH, SHIPS_HEIGHT)) {
+					return sn;
+				}
 			}
+
+			return ShipName.None;
 		}
 
-		return ShipName.None;
-	}
+
 }
 }

@@ -2,16 +2,18 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Carlos\BattleShips\src\Model\AIMediumPlayer.cs" line="104" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameResources.cs">
-    <Files>
-      <File FileName="src\Model\AIPlayer.cs" Line="8" Column="13" />
-      <File FileName="src\Model\Ship.cs" Line="129" Column="1" />
-      <File FileName="src\Model\SeaGridAdapter.cs" Line="1" Column="1" />
-      <File FileName="src\HighScoreController.cs" Line="1" Column="1" />
-      <File FileName="src\GameResources.cs" Line="20" Column="43" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="BattleShips" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BattleShips PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

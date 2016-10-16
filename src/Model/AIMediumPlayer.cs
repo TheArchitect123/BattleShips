@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 using System.Diagnostics;
+using NUnit;
+using NUnit.Framework;
 
 namespace BattleShips
 {
@@ -11,6 +13,7 @@ namespace BattleShips
 	/// The AIMediumPlayer is a type of AIPlayer where it will try and destroy a ship
 	/// if it has found a ship
 	/// </summary>
+	[TestFixture (Category = "CategoryName")]
 	public class AIMediumPlayer : AIPlayer
 	{
 		/// <summary>
@@ -28,6 +31,9 @@ namespace BattleShips
 
 		private Stack _Targets = new Stack ();
 		public AIMediumPlayer (BattleShipsGame controller) : base (controller)
+		{
+		}
+		public AIMediumPlayer () : base (new BattleShipsGame ())
 		{
 		}
 
@@ -118,5 +124,30 @@ namespace BattleShips
 				_Targets.Push (new Location (row, column));
 			}
 		}
+
+		[SetUp]
+		public void SetUp ()
+		{
+			_Random = new Random ();
+			_CurrentState = AIStates.Searching;
+		}
+
+		[Test]
+		public void  ProcessShotTest ()
+		{
+			try {
+				
+				AttackResult result = default (AttackResult);
+				int row = 0;
+				int column = 0;
+				GenerateCoords (ref row, ref column);
+				ProcessShot (row, column, result);
+				Assert.AreEqual (ResultOfAttack.Miss, result, "Fail to check the Game status after add a new status");
+				//result.Value != ResultOfAttack.Miss && result.Value != ResultOfAttack.GameOver
+			} catch (Exception ex){
+				Assert.Fail (ex.ToString());
+			}
+		}
 	}
+
 }

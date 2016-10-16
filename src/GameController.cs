@@ -417,5 +417,6 @@ namespace BattleShips
 		_aiSetting = setting;
 	}
 
+
 }
 }
