@@ -37,6 +37,9 @@ namespace BattleShips
 			NewImage("PlayButton", "deploy_play_button.png");
 			NewImage("RandomButton", "deploy_randomize_button.png");
 
+			//Discovery
+			NewImage ("ExitButton", "exit_button.png");
+
 			//Ships
 			int i = 0;
 			for (i = 1; i <= 5; i++)

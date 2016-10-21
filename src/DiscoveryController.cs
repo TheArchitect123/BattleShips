@@ -8,7 +8,13 @@ namespace BattleShips
 	/// </summary>
 	public static class DiscoveryController
 	{
-
+		/// <summary>
+		/// The exit button dimensions.
+		/// </summary>
+		private const int EXIT_BUTTON_LEFT = 693;
+		private const int TOP_BUTTONS_TOP = 72;
+		private const int TOP_BUTTONS_HEIGHT = 46;
+		private const int PLAY_BUTTON_WIDTH = 80;
 		/// <summary>
 		/// Handles input during the discovery phase of the game.
 		/// </summary>
@@ -25,6 +31,10 @@ namespace BattleShips
 
 			if (SwinGame.MouseClicked(MouseButton.LeftButton))
 			{
+				if (UtilityFunctions.IsMouseInRectangle (EXIT_BUTTON_LEFT, TOP_BUTTONS_TOP, PLAY_BUTTON_WIDTH, TOP_BUTTONS_HEIGHT)) {
+					GameController.AddNewState (GameState.ViewingGameMenu);
+				}
+
 				DoAttack();
 			}
 		}
@@ -63,9 +73,9 @@ namespace BattleShips
 			const int HITS_TOP = 206;
 			const int SPLASH_TOP = 256;
 
-			if ((SwinGame.KeyDown(KeyCode.vk_LSHIFT) | SwinGame.KeyDown(KeyCode.vk_RSHIFT)) & SwinGame.KeyDown(KeyCode.vk_c))
+			if ((SwinGame.KeyDown(KeyCode.vk_SPACE))
 			{
-				UtilityFunctions.DrawField(GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, true);
+				UtilityFunctions.DrawField(GameController.ComputerPlayer.PlayerGrid, GameController.ComputerPlayer, true);
 			}
 			else {
 				UtilityFunctions.DrawField(GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, false);
@@ -77,6 +87,8 @@ namespace BattleShips
 			SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);
 			SwinGame.DrawText(GameController.HumanPlayer.Hits.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, HITS_TOP);
 			SwinGame.DrawText(GameController.HumanPlayer.Missed.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SPLASH_TOP);
+
+			SwinGame.DrawBitmap(GameResources.GameImage("ExitButton"), EXIT_BUTTON_LEFT, TOP_BUTTONS_TOP);
 		}
 
 	}
