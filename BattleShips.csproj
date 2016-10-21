@@ -100,6 +100,7 @@
     <Compile Include="src\Model\Tile.cs" />
     <Compile Include="src\Model\TileView.cs" />
     <Compile Include="src\Model\AIEasyPlayer.cs" />
+    <Compile Include="src\Unit Tests\ZaneUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -195,6 +196,9 @@
     <WinLibraryFiles Include="lib\win\zlib1.dll" />
     <None Include="Resources\sounds\1.mp3" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Unit Tests\" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
