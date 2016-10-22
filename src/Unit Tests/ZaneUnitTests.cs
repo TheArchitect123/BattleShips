@@ -20,5 +20,15 @@ namespace BattleShips
 			testTile.Shoot ();
 			Assert.AreEqual (true, testTile.Shot);
 		}
+
+		[Test]
+		public void Test2Ship ()
+		{
+			Assert.AreEqual (null, testTile.Ship);
+			testTile.Ship = new Ship (ShipName.Tug);
+			Assert.AreEqual ("BattleShips.Ship" , testTile.Ship.ToString());
+			testTile.ClearShip ();
+			Assert.AreEqual (null, testTile.Ship);
+		}
 	}
 }
